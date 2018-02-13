@@ -9,7 +9,9 @@
   "scripts": {
     "test": "jest --verbose",
     "lint": "eslint .",
-    "start": "nodemon server.js"
+    "start": "nodemon index.js",
+    "start-db": "mkdir -p ./data/db && mongod --dbpath ./data/db",
+    "stop-db": "killall mongod"
   },
   "keywords": [],
   "author": "Mitchell",
@@ -19,7 +21,9 @@
     "jest": "^22.1.4"
   },
   "dependencies": {
+    "dotenv": "^5.0.0",
     "faker": "^4.1.0",
+    "mongoose": "^5.0.4",
     "uuid": "^3.2.1"
   }
 }
